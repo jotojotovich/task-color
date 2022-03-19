@@ -1,314 +1,380 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Try</title>
-    <link rel="stylesheet" href="css/w3.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://unpkg.com/spacingjs" defer></script>
-    <script src="js/w3.js"></script>
+    <title>Layout</title>
+    <style>
+      /* section {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        
+
+        grid-template-areas: "a a a b c";
+        align-items: start;
+
+        outline: 1px solid gray;
+        width: 100%;
+        height: 500px;
+      } */
+
+      /*       
+      #id-1,
+      #id-2,
+      #id-3 {
+        outline: 1px solid gray;
+        width: max-content;
+        height: 450px;
+        background-color: darkgray;
+      }
+      #id-1 {
+        grid-area: a;
+        
+        height: 514px;
+      }
+      #id-2 {
+        grid-area: b;
+        
+        width: 204px;
+        height: 192px;
+        background-color: chocolate;
+      }
+      #id-3 {
+        grid-area: c;
+        
+        width: 272px;
+        height: 327px;
+      } */
+    </style>
   </head>
-
   <body>
-    <main>
-      <!--       
-      <nav>
-        <ul>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
-      </nav>
--->
+    <h1 class="">Каталог цветов Pantone</h1>
+    <img src="img/h1.png" alt="" />
 
-      <h1 class="">Каталог цветов Pantone</h1>
-      <section class="main">
-        <div class="color-filter">
-          <h6>Фильтр по цвету</h6>
-          <div>
-            <div class="filter">
-              <img src="img/Screenshot1.png" alt="filter" />
-            </div>
-            <div class="sample">
-              <img src="" alt="sample" />
-            </div>
+    <!-- grid -->
+
+    <br /><br />
+
+    <div class="grid-wrap">
+      <div class="item1">
+        <p>Фильтр по цвету</p>
+        <img src="img/01.png" alt="" />
+      </div>
+      <div class="item2">
+        <div class="container">
+          <div id="img-2">
+            <img src="img/02.png" alt="" />
           </div>
-          <p>Металлизированные цвета</p>
-        </div>
-        <div class="color-example"></div>
-        <div class="page-type">
-          <label for="element">
-            Тип бумаги:<br />
-            <input type="checkbox" id="coated" />
-            <input type="checkbox" id="offset" />
-          </label>
-          <div class="change-bg">
-            <table>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>
+          <div id="img-4">
+            <img src="img/04.png" alt="" />
           </div>
         </div>
-      </section>
-
-      <!-- средняя секция -->
-      <section class="middle">
-        <p>Фильтр по номеру цвета</p>
-        <div>
-          <input type="text" placeholder="#номер" />
-          <button>Сбросить фильтр</button>
+      </div>
+      <div class="item3">
+        <p>Металлизированные цвета</p>
+        <img src="img/06.png" alt="" />
+        <div id="img-3">
+          <img src="img/03.png" alt="" />
         </div>
-        <div>
-          <label for="element">
-            Безопасные цвета
-            <input type="checkbox" id="element" />
-          </label>
-          <!-- <input type="checkbox" name="" id=""> -->
-        </div>
-      </section>
-
-      <section class="table">
-        <header>
-          <p>Таблица соответствия цветов Pfntone, CMYK, RGB, RAL</p>
-          <p>Количество строк таблицы</p>
-          <p>
-            <select name="" id="string-count">
-              <option value="">100</option>
-              <option value="">50</option>
-              <option value="">20</option>
-              <option value="">10</option>
-            </select>
-          </p>
-        </header>
-
-        <table>
+      </div>
+      <div class="item4"></div>
+      <div class="item5">
+        <img src="img/05.png" alt="" />
+      </div>
+      <div class="item6">
+        <label for="element" class="paper-type">
+          Тип бумаги:<br />
+          <input type="checkbox" id="coated" />Мелованная<br />
+          <input type="checkbox" id="offset" />Офсетная
+        </label>
+      </div>
+      <div class="item7">
+        <p>Сменить фон:</p>
+        <table class="change-color">
           <tr>
-            <th>Номера цветов</th>
-            <th>C</th>
-            <th>M</th>
-            <th>Y</th>
-            <th>K</th>
-            <th>HTML</th>
-            <th>R</th>
-            <th>G</th>
-            <th>B</th>
-            <th>RAL</th>
-            <th>Образец</th>
-            <th>Копировать в буфер</th>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
-          </tr>
-          <tr>
-            <td>Pantone</td>
-            <td>7</td>
-            <td>42</td>
-            <td>100</td>
-            <td>58</td>
-            <td>735010</td>
-            <td>-</td>
-            <td>-</td>
-            <td>CMYK</td>
-            <td>HTML</td>
-            <td>RGB</td>
-            <td>RAL</td>
+            <td><img src="img/20.png" alt="" /></td>
+            <td><img src="img/20.png" alt="" /></td>
+            <td><img src="img/20.png" alt="" /></td>
+            <td><img src="img/20.png" alt="" /></td>
+            <td><img src="img/20.png" alt="" /></td>
+            <td><img src="img/20.png" alt="" /></td>
+            <td><img src="img/20.png" alt="" /></td>
           </tr>
         </table>
-      </section>
-    </main>
+      </div>
+      <!-- middle section -->
+      <div class="middle">
+        <p>
+          Фильтр по номеру цвета
+          <img src="img/01.png" alt="" />
+        </p>
+        <div>
+          <input type="text" placeholder="# номер" />
+          <button>Сбросить фильтр</button>
+        </div>
+      </div>
+      <div class="safe-colors">
+        <span>Безопасные цвета</span>
+        <input type="checkbox" id="safe-colors" />
+      </div>
+    </div>
 
-    <script src="try.js"></script>
+    <section class="table">
+      <header>
+        <p>
+          Таблица соответствия цветов Pfntone, CMYK, RGB, RAL <br />
+          <img src="img/t.png" alt="" />
+        </p>
+        <p>Количество строк таблицы</p>
+        <p>
+          <select name="" id="string-count">
+            <option value="">100</option>
+            <option value="">50</option>
+            <option value="">20</option>
+            <option value="">10</option>
+          </select>
+        </p>
+      </header>
+
+      <table>
+        <colgroup>
+          <col span="1" style="border-right: 1px solid #d4d3d9; border-left: none; width: 130px;" />
+          <col span="1" style="border-right: none; border-left: none; width: 38px;" />
+          <col span="1" style="border-right: none; border-left: none; width: 38px;" />
+          <col span="1" style="border-right: none; border-left: none; width: 38px;" />
+          <col span="1" style="border-right: 1px solid #d4d3d9; border-left: none; width: 38px;" />
+          <col span="1" style="border-right: 1px solid #d4d3d9; border-left: none; width: 96px;" />
+          <col span="1" style="border-right: none; border-left: none; width: 44px;" />
+          <col span="1" style="border-right: none; border-left: none; width: 44px;" />
+          <col span="1" style="border-right: 1px solid #d4d3d9; border-left: none; width: 44px;" />
+          <col span="1" style="border-right: 1px solid #d4d3d9; border-left: none; width: 117px" />
+          <col span="1" style="border-right: 1px solid #d4d3d9; border-left: none; width: 320px;" />
+          <col span="1" style="border-right: none; border-left: none; width: 250px;" />
+        </colgroup>
+        <tr>
+          <th class="t-col">Номера цветов</th>
+          <th class="t-col">C</th>
+          <th class="t-col">M</th>
+          <th class="t-col">Y</th>
+          <th class="t-col">K</th>
+          <th class="t-col">HTML</th>
+          <th class="t-col">R</th>
+          <th class="t-col">G</th>
+          <th class="t-col">B</th>
+          <th class="t-col">RAL</th>
+          <th class="t-col">Образец</th>
+          <th class="t-col">Копировать в буфер</th>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+        <tr>
+          <td>Pantone</td>
+          <td>7</td>
+          <td>42</td>
+          <td>100</td>
+          <td>58</td>
+          <td>735010</td>
+          <td>255</td>
+          <td>255</td>
+          <td>255</td>
+          <td>HTML</td>
+          <td>RGB</td>
+          <td>RAL</td>
+        </tr>
+      </table>
+    </section>
+
+    <br /><br /><br /><br /><br /><br />
+
+    <table>
+      <tr>
+        <th><div>Номера цветов</div></th>
+        <th><div>CMYK</div></th>
+        <th><div>HTML</div></th>
+        <th><div>RGB</div></th>
+      </tr>
+    </table>
   </body>
 </html>
