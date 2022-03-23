@@ -289,12 +289,18 @@ table {
     grid-template-rows: 83px 110px 145px 118px; /* 83 + 110 + 145 */ /* width: 80%; */ /* float: right; */
   }
 
+  .middle{
+    padding: 0 0 0 3px;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
   .middle input {
     font-size: 12px;
   }
 
   #img-4 {
-    margin-left: -30px;
+    margin-left: -20px;
     margin-right: 10px;
   }
   /*   
