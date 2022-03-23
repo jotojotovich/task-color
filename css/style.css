@@ -315,7 +315,7 @@ table {
 }
 
 @media screen and (max-device-width: 525px) {
-   {
+  * {
     font-size: 84%;
   }
 
@@ -328,6 +328,17 @@ table {
     grid-template-rows: 83px 110px 145px 118px; /* 83 + 110 + 145 */ /* width: 80%; */ /* float: right; */
   }
 
+  .paper-type {
+    margin-left: 10px;
+  }
+
+  .item7 p {
+    margin-left: 10px;
+  }
+
+  .change-color {
+    border-spacing: 10px;
+  }
   .middle input {
     font-size: 10px;
   }
