@@ -328,8 +328,13 @@ table {
     grid-template-rows: 83px 110px 145px 118px; /* 83 + 110 + 145 */ /* width: 80%; */ /* float: right; */
   }
 
-  .paper-type {
+  .paper-type,
+  .paper-type input {
     margin-left: 10px;
+  }
+
+  .paper-type input {
+    margin-right: 5px;
   }
 
   .item7 p {
